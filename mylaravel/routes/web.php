@@ -39,3 +39,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/portfolio', 'App\Http\Controllers\MainController@portfolio')->name('portfolio');
+
+Route::post('/portfolio/check', 'App\Http\Controllers\MainController@portfolio_check');
